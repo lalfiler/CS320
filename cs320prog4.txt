@@ -1,0 +1,29 @@
+	else{
+		FILE *fp = fopen(argv[1],"r");
+		
+		if(fp == NULL){					  		
+			fprintf(stderr,"cannot open file");
+		}
+		else{	
+		int a;
+			while((a = fgetc(fp)) != EOF){
+				conv(a);
+			}
+			fclose(fp);
+		}
+		}
+			int i,j,k;
+			char *array[length]; /*make an array based on size of chars*/
+				do{
+				
+				array[length-1] = "%s",a; 
+				length = length - 1;
+				}while(i >= 0);
+				for(j = length; j >= 0; j--){
+					printf("%c",array[j]);
+					k++;
+					if(k == 20){
+						printf("\n");
+						k = 0;
+					}
+				}

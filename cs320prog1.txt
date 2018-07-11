@@ -1,0 +1,53 @@
+#include <stdio.h>
+int main( void )
+{
+        int iochar,
+                numlower = 0,
+                numupper = 0,
+		linecount = 0,
+		non = 0;
+		underscore = 0;
+        while ( ( iochar = getchar() ) != EOF){
+		linecount++;
+		if(linecount == 20){
+			putchar('\n');
+			linecount = 0;
+				}
+                else if ( ( 'a' <= iochar) && (iochar <= 'z' ) ){
+                        numlower++;
+                        putchar({ iochar - 32);
+                }
+                else if ( ( 'A' <= iochar ) && ( iochar <= 'Z' ) ){
+                        numupper++;
+                        putchar( iochar + 32);
+		
+		}
+		else if ('_' <= iochar){
+			underscore++;
+			putchar("%%%x",iochar);
+		}
+		else if ('?' <= iochar){
+			underscore++;
+			putchar("%%%x",iochar);
+		}
+		else if (':' <= iochar){
+			underscore++;
+			putchar("%%%x",iochar);
+		}
+		else if ('/' <= iochar){
+			underscore++;
+			putchar("%%%x",iochar);
+		}
+		else if ('&' <= iochar){
+			underscore++;
+			putchar("%%%x",iochar);
+		}
+		else if (' ' <= iochar){
+			underscore++;
+			putchar("%%%x",iochar);
+		}
+		else putchar(iochar);
+        	}        
+		return 0;
+		
+}

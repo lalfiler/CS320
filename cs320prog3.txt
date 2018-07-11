@@ -1,0 +1,87 @@
+(define (thirds lis)
+	(cond
+	((null? lis) lis)
+	((= (length lis) 1) lis)
+	(else (cons (car lis)(thirds(cons((cadddr lis) null)))))))
+
+(define (thirds lis)
+	(cond
+	((atom? lis) "USAGE:")
+	((null? lis) lis)
+	((= (length lis) 1) lis)
+	((= (length lis) 2) (cons (car lis) null))
+	(else (cons (car lis)(thirds(cdddr lis))))))
+
+(define (atom? x)
+	(not (pair? x))
+)
+(define (thelper lis)
+(if (> lis 1)
+	(error"x")
+	lis))
+
+define(thirdy lis)
+(if(or(null? lis)
+	(null?(cdr lis))
+'()
+(cons (car lis)
+(thirdy(cdddr lis))))
+
+(define (swap lst)
+(if (or (null? lst) (null? (cdr lst)))
+lst
+(cons (cadr lst) (cons (car lst) (swap (cddr lst))))))
+
+(define (evenatom lis)
+  (cond
+  ((null? lis)#T)
+  ((pair? (car lis))(+(evenatom (car lis)) (evenatom (cdr lis))))
+  (else #F)))
+
+(define (check lis)
+(if (= lis 1)
+	(oddatom)
+	(error "USAGE:")))
+
+(define (test lis)
+(cond
+((null? lis)#t)
+(pair? 
+
+(define (oddatom lst)
+  (cond
+    ((null? lst)       #t)
+    ((not(pair? lst)) #f)
+    (else (eq? (oddatom (car lst)) (oddatom (cdr lst))))))
+
+(define (odatom lst)
+  (cond
+    ((null? lst)       #t)
+    ((not(pair? lst)) #f)
+    (else #T)))
+
+(define (cd n)
+(if(= n 0)
+null
+(begin
+(display n)
+(newline)
+(cd (- n 1)))))
+
+(define (to n)
+("ye")
+
+(define (evens lst)
+  (if (or (null? lst)             ; if the list is empty 
+          (null? (cdr lst)))      ; or the list has a single element
+      '()                         ; then return the empty list
+      (cons (car lst)            ; otherwise `cons` the second element
+            (evens (cdddr lst))))) ; and recursively advance two elements
+(define (rec lis)
+(cons (car lis) (rec lis)))
+(define (swaphelp lis)
+ (if (or (null? lis)(null? (cdr lis))) lis
+	 (cons(cadr lis)(cons(car lis)(swaphelp (cddr lis))))))
+(define (swap lis)
+ (if (atom? lis) "USAGE:"
+(swaphelp lis)))
